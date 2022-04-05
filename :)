@@ -1,0 +1,42 @@
+local HDAdminGUIS = Instance.new("ScreenGui")
+local main = Instance.new("ImageLabel")
+local destroy = Instance.new("TextButton")
+local trick = Instance.new("ImageLabel")
+
+HDAdminGUIS.Name = "HDAdminGUIS"
+HDAdminGUIS.Parent = game.CoreGui
+HDAdminGUIS.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = HDAdminGUIS
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.Position = UDim2.new(0, 848, 0, 256)
+main.Size = UDim2.new(0, 349, 0, 489)
+main.Visible = true
+main.Active = true
+main.Draggable = true
+main.Image = "rbxassetid://5365155154"
+
+destroy.Name = "destroy"
+destroy.Parent = main
+destroy.BackgroundColor3 = Color3.fromRGB(253, 104, 92)
+destroy.Position = UDim2.new(0, 316, 0, 0)
+destroy.Size = UDim2.new(0, 33, 0, 34)
+destroy.Font = Enum.Font.SourceSans
+destroy.Text = "X"
+destroy.TextColor3 = Color3.fromRGB(0, 0, 0)
+destroy.BorderSizePixel = 0
+destroy.TextSize = 25.000
+
+trick.Name = "trick"
+trick.Parent = HDAdminGUIS
+trick.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+trick.Position = UDim2.new(0, 102, 0, -35)
+trick.Size = UDim2.new(0, 34, 0, 32)
+trick.Visible = true
+trick.Active = true
+trick.Image = "rbxassetid://7341314260"
+
+destroy.MouseButton1Click:connect(function()
+    HDAdminGUIS:Destroy()
+end)
